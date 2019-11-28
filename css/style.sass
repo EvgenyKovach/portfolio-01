@@ -119,7 +119,7 @@ a
           content: ""
           position: absolute
           width: 0%
-          height: 1px
+          height: 3px
           bottom: 20px
           background: $glColor
           z-index: 3
@@ -127,7 +127,7 @@ a
           content: ""
           position: absolute
           width: 0%
-          height: 1px
+          height: 2px
           bottom: 20px
           left: 22px
           background: $uxWhite
@@ -138,7 +138,7 @@ a
           animation: menuItem 0.55s ease-in-out
           width: 58%
         &::after
-          animation: menuItem 0.25s linear
+          animation: menuItem 0.35s linear
           width: 55%
 
         
@@ -206,6 +206,7 @@ a
       font-size: 18px
       font-weight: 700
       text-transform: uppercase
+      transition: .25s
       +bp(850px)
         display: none
         padding: 6vh 0
@@ -213,6 +214,8 @@ a
         background: $uxBlack
         color: $uxWhite
         text-align: center
+      &:hover
+        color: $glColor
 
     &__item:nth-child(6)
       padding-right: 0
@@ -318,6 +321,7 @@ a
         font-weight: 700
         text-transform: uppercase
         color: $uxWhite
+        border: 2px solid transparent
         +bp(850px)
           margin: 10px auto
 
@@ -325,8 +329,19 @@ a
         margin-left: 20px
         background: $uxWhite
         color: $uxBlack
+        transition: .25s
+        &:hover
+          background: $glColor
+          color: $uxWhite
+          border: 2px solid $uxWhite
         +bp(850px)
           margin: auto
+      .more
+        transition: .25s
+        &:hover
+          background: $uxWhite
+          color: $uxBlack
+          border: 2px solid $glColor
 
     &__text
       width: 35vw
