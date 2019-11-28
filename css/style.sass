@@ -91,13 +91,11 @@ a
       justify-content: center
       text-transform: uppercase
       
-
       &__item
         position: relative
         padding: 22px 20px
         +bp(600px)
           padding: 12px 20px
-
 
         &:last-child
           padding: 22px 45px
@@ -116,7 +114,6 @@ a
           &::before,
           &::after
             display: none
-
 
         &::before
           content: ""
@@ -169,6 +166,9 @@ a
       width: 100%
       padding: 12px 0
       text-align: center
+      +bp(850px)
+        width: auto
+        margin: auto
     span
       position: relative
       &::before
@@ -181,19 +181,19 @@ a
         bottom: 0px
         color: $glColor
         font-weight: bold
-        z-index: 1
+        z-index: 0
         +bp(1150px)
           left: 80px
-
 
   .nav
     display: flex
     margin-right: 60px
     +bp(1150px)
       margin: 0
-    +bp(800px)
-      display: none
-
+    +bp(850px)
+      position: fixed
+      top: 0
+      flex-direction: column
     +bp(1150px)
       order: 1
       width: 100%
@@ -206,11 +206,20 @@ a
       font-size: 18px
       font-weight: 700
       text-transform: uppercase
-      +bp(750px)
-        padding: 15px
+      +bp(850px)
+        display: none
+        padding: 6vh 0
+        width: 100vw
+        background: $uxBlack
+        color: $uxWhite
+        text-align: center
 
     &__item:nth-child(6)
       padding-right: 0
+      +bp(1150px)
+        padding: 20px 30px
+      +bp(850px)
+        padding: 6vh 0
 
 
   .funcBtns
@@ -230,6 +239,22 @@ a
     &__basket
       margin-right: 10px
 
+  .menuToggle
+    display: none
+    position: fixed
+    bottom: 0
+    padding: 10px 0 0 0 
+    color: $uxWhite
+    width: 100%
+    text-align: center
+    font-size: 28px
+    background: $glColor
+    +bp(850px)
+      display: block
+    i
+      animation: burger 1.5s ease-in-out infinite
+    .fa-times
+      display: none
 
 ////////////////////////////////////////////////////////////////
 //////        PREVIEW        ///////////////////////////////////
@@ -245,7 +270,9 @@ a
     justify-content: center
     align-items: center
     align-content: center
-    padding: 150px 0 150px 0
+    padding: 150px 0
+    +bp(850px)
+      padding: 75px 0
 
     &__ico 
       color: $glColor
@@ -259,6 +286,7 @@ a
       text-transform: uppercase
       letter-spacing: 4.8px
       padding: 14px
+      text-align: center
 
     &__title2
       padding-bottom: 20px
@@ -274,6 +302,8 @@ a
     &__btns
       display: flex
       padding: 50px 0
+      +bp(850px)
+        flex-wrap: wrap
 
       .more,
       .connect
@@ -288,11 +318,22 @@ a
         font-weight: 700
         text-transform: uppercase
         color: $uxWhite
+        +bp(850px)
+          margin: 10px auto
 
       .connect
         margin-left: 20px
         background: $uxWhite
         color: $uxBlack
+        +bp(850px)
+          margin: auto
+
+    &__text
+      width: 35vw
+      text-align: center
+      +bp(1100px)
+        width: 80%
+        
 
 
 

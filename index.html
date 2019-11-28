@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
   <title>Prt I</title>
@@ -38,8 +39,11 @@
           <a href="#" class="nav__item">Pricing</a>
           <a href="#" class="nav__item">About</a>
           <a href="#" class="nav__item">Contact</a>
-          <a href="#" class="menuToggle"></a>
         </nav>
+        <a href="#" class="menuToggle">
+          <i class="fas fa-hamburger"></i>
+          <i class="fas fa-times"></i>
+        </a>
         <div class="funcBtns">
           <a href="#" class="funcBtns__basket">
             <i class="fas fa-shopping-cart"></i>
@@ -66,5 +70,19 @@ laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.</p>
       </div>
     </div>
   </div>
+
+<script>
+  // меню
+  $('.menuToggle .fa-hamburger').click(function () {
+    $('.nav__item').css({display: "block"});
+    $('.fa-hamburger').css({display: "none"});
+    $('.fa-times').css({display: "block"});
+  });
+  $('.menuToggle .fa-times').click(function () {
+    $('.nav__item').css({display: "none"});
+    $('.fa-hamburger').css({display: "block"});
+    $('.fa-times').css({display: "none"});
+  });
+</script>
 </body>
 </html>
