@@ -1,10 +1,143 @@
-@import "mixin"
+@import "mixin", "anim"
+
+$glColor: #3598db
 
 body
   color: #111111
   font-family: Roboto, "sans-serif"
   font-size: 16px
   padding: 0
+  margin: 0
+
+p
+  padding: 0
+  margin: 0
+
+a
+  text-decoration: none
+  color: #fff
 
 .cont
-  max-width: 1400px
+  max-width: 1380px
+  padding: 0 15px
+  margin: auto
+
+
+//////////////////////////////////////////
+//////        HEADER        //////////////
+//////////////////////////////////////////
+
+
+.headerBOX
+  background-color: #222
+  
+  .header
+    display: flex
+    justify-content: space-between
+    +bp(1100px)
+      flex-direction: column
+      align-items: center
+
+    .contacts
+      display: flex
+      +bp(1100px)
+        order: 1
+      +bp(600px)
+        width: 100%
+        flex-direction: column
+        margin-top: 15px
+        align-items: center
+      a
+        display: block
+        padding: 22px 10px
+        color: #c0c0c0
+        font-size: 18px
+        font-family: Arimo
+        +bp(600px)
+          padding: 5px 10px
+        i
+          font-size: 16px
+          color: $glColor
+          margin-right: 10px
+
+    &__phone
+      position: relative
+      margin-left: 90px
+      +bp(600px)
+        margin-left: 0px
+      &::before
+        content: ""
+        position: absolute
+        left: -47px
+        height: 18px
+        width: 2px
+        border-left: 1px solid #c0c0c0
+        +bp(600px)
+          display: none
+
+    &__phone:hover i
+      animation: phone 0.25s linear 6 alternate-reverse
+    
+    &__email:hover i
+      animation: email 0.25s linear 6 alternate-reverse
+
+    .menu
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      
+
+      &__item
+        position: relative
+        padding: 22px 20px
+        +bp(600px)
+          padding: 12px 10px
+
+
+        &:last-child
+          padding: 22px 45px
+          margin-left: 40px
+          background-color: $glColor
+          transition: .35s
+          +bp(600px)
+            padding: 12px 30px
+            flex-basis: 100%
+            margin-left: 0
+            text-align: center
+            order: -1
+            
+          &:hover
+            box-shadow: 0 0 15px $glColor
+          &::before,
+          &::after
+            display: none
+
+
+        &::before
+          content: ""
+          position: absolute
+          width: 0%
+          height: 1px
+          bottom: 20px
+          background: $glColor
+          z-index: 3
+        &::after
+          content: ""
+          position: absolute
+          width: 0%
+          height: 1px
+          bottom: 20px
+          left: 22px
+          background: #fff
+          z-index: 2
+
+      &__item:hover
+        &::before
+          animation: menuItem 0.65s linear
+          width: 58%
+        &::after
+          animation: menuItem 0.35s linear
+          width: 55%
+        
+
+
