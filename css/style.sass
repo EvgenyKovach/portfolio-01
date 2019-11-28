@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap')  
 @import "mixin", "anim"
 
 $glColor: #eb643c
+$uxWhite: #F3F3F3
+$uxBlack: #222222
 
 body
-  color: #111111
+  color: $uxBlack
   font-family: Roboto, "sans-serif"
   font-size: 16px
   padding: 0
@@ -15,7 +18,7 @@ p
 
 a
   text-decoration: none
-  color: #fff
+  color: $uxWhite
 
 .cont
   max-width: 1380px
@@ -23,13 +26,13 @@ a
   margin: auto
 
 
-//////////////////////////////////////////
-//////        HEADER        //////////////
-//////////////////////////////////////////
+//////////////////////////////////////////////////
+//////        HEADER        //////////////////////
+//////////////////////////////////////////////////
 
 
 .headerBOX
-  background-color: #222
+  background-color: $uxBlack
   
   .header
     display: flex
@@ -50,7 +53,7 @@ a
       a
         display: block
         padding: 22px 10px
-        color: #c0c0c0
+        color: $uxWhite
         font-size: 18px
         font-family: Arimo
         +bp(600px)
@@ -71,7 +74,7 @@ a
         left: -47px
         height: 18px
         width: 2px
-        border-left: 1px solid #c0c0c0
+        border-left: 1px solid $uxWhite
         pointer-events: none
         +bp(600px)
           display: none
@@ -130,7 +133,7 @@ a
           height: 1px
           bottom: 20px
           left: 22px
-          background: #fff
+          background: $uxWhite
           z-index: 2
 
       &__item:hover
@@ -142,38 +145,62 @@ a
           width: 55%
 
         
-//////////////////////////////////////////
-//////        NAVIGATION        //////////
-//////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
+//////        NAVIGATION        ///////////////////////////////////
+///////////////////////////////////////////////////////////////////
 
+.navigationBOX
+  background: $uxWhite
 
 .navigation
   display: flex
-  justify-content: space-between
+  justify-content: center
   align-items: center
-  border-bottom: 1px solid black
   padding: 10px 0
-  +bp(1100px)
+
+  +bp(1150px)
     flex-wrap: wrap
     justify-content: center
 
   .logo
     padding: 26px 0
-    +bp(1100px)
+    margin-right: auto
+    +bp(1150px)
       width: 100%
       padding: 12px 0
       text-align: center
+    span
+      position: relative
+      &::before
+        position: absolute
+        content: "What else?"
+        width: 75px
+        height: 20px
+        font-size: 14px
+        left: 86px
+        bottom: 0px
+        color: $glColor
+        font-weight: bold
+        z-index: 1
+        +bp(1150px)
+          left: 80px
 
 
   .nav
     display: flex
-    +bp(1100px)
+    margin-right: 60px
+    +bp(1150px)
+      margin: 0
+    +bp(800px)
+      display: none
+
+    +bp(1150px)
       order: 1
       width: 100%
       justify-content: center
 
     &__item
-      padding: 20px
+      padding: 20px 30px
       color: #353535
       font-family: Montserrat
       font-size: 18px
@@ -181,7 +208,9 @@ a
       text-transform: uppercase
       +bp(750px)
         padding: 15px
-        display: none
+
+    &__item:nth-child(6)
+      padding-right: 0
 
 
   .funcBtns
@@ -192,7 +221,78 @@ a
       border: 1px solid #b5b5b5
       border-radius: 5px
       padding: 14px
-      color: #000
+      color: $uxBlack
+      transition: .15s ease-in-out
+      &:hover
+        background: $uxBlack
+        color: $glColor
     
     &__basket
       margin-right: 10px
+
+
+////////////////////////////////////////////////////////////////
+//////        PREVIEW        ///////////////////////////////////
+////////////////////////////////////////////////////////////////
+
+.previewBOX
+  background: $uxBlack
+  color: #ddd
+
+  .preview
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    align-content: center
+    padding: 150px 0 150px 0
+
+    &__ico 
+      color: $glColor
+      font-size: 64px
+
+    &__title1
+      color: $uxWhite
+      font-family: 'Montserrat', sans-serif
+      font-size: 16px
+      font-weight: 700
+      text-transform: uppercase
+      letter-spacing: 4.8px
+      padding: 14px
+
+    &__title2
+      padding-bottom: 20px
+      font-family: Montserrat
+      font-size: 48px
+      font-weight: 700
+      line-height: 28px
+      color: $uxWhite
+      letter-spacing: 0.48px
+      span
+        color: $glColor
+
+    &__btns
+      display: flex
+      padding: 50px 0
+
+      .more,
+      .connect
+        text-align: center
+        display: block
+        border-radius: 30px
+        padding: 20px 20px
+        width: 150px
+        background: $glColor
+        font-family: Montserrat
+        font-size: 13px
+        font-weight: 700
+        text-transform: uppercase
+        color: $uxWhite
+
+      .connect
+        margin-left: 20px
+        background: $uxWhite
+        color: $uxBlack
+
+
+

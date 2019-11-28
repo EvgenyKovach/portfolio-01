@@ -1,18 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 @-webkit-keyframes phone {
   0% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
 }
-
 @keyframes phone {
   0% {
-    -webkit-transform: rotate(15deg);
-            transform: rotate(15deg);
+    -webkit-transform: rotate(25deg);
+            transform: rotate(25deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
@@ -22,23 +22,23 @@
 
 @-webkit-keyframes email {
   0% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
 }
 
 @keyframes email {
   0% {
-    -webkit-transform: translateY(3px);
-            transform: translateY(3px);
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
   100% {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
   }
 }
 
@@ -61,7 +61,7 @@
 }
 
 body {
-  color: #111111;
+  color: #222222;
   font-family: Roboto, "sans-serif";
   font-size: 16px;
   padding: 0;
@@ -75,7 +75,7 @@ p {
 
 a {
   text-decoration: none;
-  color: #fff;
+  color: #F3F3F3;
 }
 
 .cont {
@@ -85,7 +85,7 @@ a {
 }
 
 .headerBOX {
-  background-color: #222;
+  background-color: #222222;
 }
 
 .headerBOX .header {
@@ -140,7 +140,7 @@ a {
 .headerBOX .header .contacts a {
   display: block;
   padding: 22px 10px;
-  color: #c0c0c0;
+  color: #F3F3F3;
   font-size: 18px;
   font-family: Arimo;
 }
@@ -174,7 +174,7 @@ a {
   left: -47px;
   height: 18px;
   width: 2px;
-  border-left: 1px solid #c0c0c0;
+  border-left: 1px solid #F3F3F3;
   pointer-events: none;
 }
 
@@ -262,7 +262,7 @@ a {
   height: 1px;
   bottom: 20px;
   left: 22px;
-  background: #fff;
+  background: #F3F3F3;
   z-index: 2;
 }
 
@@ -278,21 +278,24 @@ a {
   width: 55%;
 }
 
+.navigationBOX {
+  background: #F3F3F3;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px solid black;
   padding: 10px 0;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .navigation {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -304,9 +307,10 @@ a {
 
 .navigation .logo {
   padding: 26px 0;
+  margin-right: auto;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
   .navigation .logo {
     width: 100%;
     padding: 12px 0;
@@ -314,13 +318,49 @@ a {
   }
 }
 
+.navigation .logo span {
+  position: relative;
+}
+
+.navigation .logo span::before {
+  position: absolute;
+  content: "What else?";
+  width: 75px;
+  height: 20px;
+  font-size: 14px;
+  left: 86px;
+  bottom: 0px;
+  color: #eb643c;
+  font-weight: bold;
+  z-index: 1;
+}
+
+@media (max-width: 1150px) {
+  .navigation .logo span::before {
+    left: 80px;
+  }
+}
+
 .navigation .nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 60px;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1150px) {
+  .navigation .nav {
+    margin: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .navigation .nav {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) {
   .navigation .nav {
     -webkit-box-ordinal-group: 2;
         -ms-flex-order: 1;
@@ -333,7 +373,7 @@ a {
 }
 
 .navigation .nav__item {
-  padding: 20px;
+  padding: 20px 30px;
   color: #353535;
   font-family: Montserrat;
   font-size: 18px;
@@ -344,8 +384,11 @@ a {
 @media (max-width: 750px) {
   .navigation .nav__item {
     padding: 15px;
-    display: none;
   }
+}
+
+.navigation .nav__item:nth-child(6) {
+  padding-right: 0;
 }
 
 .navigation .funcBtns {
@@ -359,10 +402,98 @@ a {
   border: 1px solid #b5b5b5;
   border-radius: 5px;
   padding: 14px;
-  color: #000;
+  color: #222222;
+  -webkit-transition: .15s ease-in-out;
+  transition: .15s ease-in-out;
+}
+
+.navigation .funcBtns i:hover {
+  background: #222222;
+  color: #eb643c;
 }
 
 .navigation .funcBtns__basket {
   margin-right: 10px;
+}
+
+.previewBOX {
+  background: #222222;
+  color: #ddd;
+}
+
+.previewBOX .preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 150px 0 150px 0;
+}
+
+.previewBOX .preview__ico {
+  color: #eb643c;
+  font-size: 64px;
+}
+
+.previewBOX .preview__title1 {
+  color: #F3F3F3;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 4.8px;
+  padding: 14px;
+}
+
+.previewBOX .preview__title2 {
+  padding-bottom: 20px;
+  font-family: Montserrat;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #F3F3F3;
+  letter-spacing: 0.48px;
+}
+
+.previewBOX .preview__title2 span {
+  color: #eb643c;
+}
+
+.previewBOX .preview__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0;
+}
+
+.previewBOX .preview__btns .more,
+.previewBOX .preview__btns .connect {
+  text-align: center;
+  display: block;
+  border-radius: 30px;
+  padding: 20px 20px;
+  width: 150px;
+  background: #eb643c;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #F3F3F3;
+}
+
+.previewBOX .preview__btns .connect {
+  margin-left: 20px;
+  background: #F3F3F3;
+  color: #222222;
 }
 /*# sourceMappingURL=style.css.map */
