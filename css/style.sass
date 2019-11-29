@@ -188,6 +188,7 @@ a
   .nav
     display: flex
     margin-right: 60px
+    z-index: 1001
     +bp(1150px)
       margin: 0
     +bp(850px)
@@ -209,11 +210,12 @@ a
       transition: .25s
       +bp(850px)
         display: none
-        padding: 6vh 0
+        padding: 6.15vh 0
         width: 100vw
         background: $uxBlack
         color: $uxWhite
         text-align: center
+        z-index: 1001
       &:hover
         color: $glColor
 
@@ -252,6 +254,7 @@ a
     text-align: center
     font-size: 28px
     background: $glColor
+    z-index: 1001
     +bp(850px)
       display: block
     i
@@ -264,8 +267,41 @@ a
 ////////////////////////////////////////////////////////////////
 
 .previewBOX
+  position: relative
+  overflow: hidden
   background: $uxBlack
   color: #ddd
+  z-index: 1000
+  &::before
+    content: "seo optimizeD"
+    color: #ddd
+    position: absolute
+    transform: rotate(90deg)
+    left: -137px
+    bottom: 290px
+    padding: 20px 60px
+    width: 200px
+    text-align: center
+    background: #111
+    font-family: Montserrat
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
+  &::after
+    content: "Conversion Rate"
+    color: #ddd
+    position: absolute
+    transform: rotate(90deg)
+    right: -133px
+    bottom: 290px
+    padding: 20px 60px
+    width: 200px
+    text-align: center
+    background: #111
+    font-family: Montserrat
+    font-size: 16px
+    font-weight: 700
+    text-transform: uppercase
 
   .preview
     display: flex
@@ -315,7 +351,7 @@ a
         display: block
         border-radius: 30px
         padding: 20px 20px
-        width: 150px
+        width: 175px
         background: $glColor
         font-family: Montserrat
         font-size: 13px

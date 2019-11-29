@@ -391,6 +391,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   margin-right: 60px;
+  z-index: 1001;
 }
 
 @media (max-width: 1150px) {
@@ -436,11 +437,12 @@ a {
 @media (max-width: 850px) {
   .navigation .nav__item {
     display: none;
-    padding: 6vh 0;
+    padding: 6.15vh 0;
     width: 100vw;
     background: #222222;
     color: #F3F3F3;
     text-align: center;
+    z-index: 1001;
   }
 }
 
@@ -499,6 +501,7 @@ a {
   text-align: center;
   font-size: 28px;
   background: #eb643c;
+  z-index: 1001;
 }
 
 @media (max-width: 850px) {
@@ -517,8 +520,47 @@ a {
 }
 
 .previewBOX {
+  position: relative;
+  overflow: hidden;
   background: #222222;
   color: #ddd;
+  z-index: 1000;
+}
+
+.previewBOX::before {
+  content: "seo optimizeD";
+  color: #ddd;
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  left: -137px;
+  bottom: 290px;
+  padding: 20px 60px;
+  width: 200px;
+  text-align: center;
+  background: #111;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.previewBOX::after {
+  content: "Conversion Rate";
+  color: #ddd;
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  right: -133px;
+  bottom: 290px;
+  padding: 20px 60px;
+  width: 200px;
+  text-align: center;
+  background: #111;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .previewBOX .preview {
@@ -597,7 +639,7 @@ a {
   display: block;
   border-radius: 30px;
   padding: 20px 20px;
-  width: 150px;
+  width: 175px;
   background: #eb643c;
   font-family: Montserrat;
   font-size: 13px;
