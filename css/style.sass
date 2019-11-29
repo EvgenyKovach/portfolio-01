@@ -173,17 +173,17 @@ a
       position: relative
       &::before
         position: absolute
-        content: "What else?"
-        width: 75px
+        content: "Innova technology"
+        width: 150px
         height: 20px
         font-size: 14px
-        left: 86px
+        left: 60px
         bottom: 0px
         color: $glColor
         font-weight: 400
         z-index: 0
         +bp(1150px)
-          left: 80px
+          left: 40px
 
   .nav
     display: flex
@@ -280,7 +280,6 @@ a
     &__ico 
       color: $glColor
       font-size: 64px
-      animation: racketa 2s ease-in-out
 
     &__title1
       color: $uxWhite
@@ -295,6 +294,7 @@ a
     &__title2
       padding-bottom: 20px
       font-family: Montserrat
+      text-align: center
       font-size: 48px
       font-weight: 700
       line-height: 28px
@@ -325,18 +325,22 @@ a
         border: 2px solid transparent
         +bp(850px)
           margin: 10px auto
+        +bp(437px)
+          width: 100%
 
       .connect
         margin-left: 20px
         background: $uxWhite
         color: $uxBlack
         transition: .25s
+        +bp(437px)
+          width: 100%
+          margin: 10px auto
         &:hover
           background: $glColor
           color: $uxWhite
           border: 2px solid $uxWhite
-        +bp(850px)
-          margin: auto
+        
       .more
         transition: .25s
         &:hover

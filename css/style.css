@@ -98,36 +98,6 @@
   }
 }
 
-@-webkit-keyframes racketa {
-  0% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  25% {
-    -webkit-transform: translate(50px, -50px) rotate(-30deg);
-            transform: translate(50px, -50px) rotate(-30deg);
-  }
-  50% {
-    -webkit-transform: translate(0px, -100px) rotate(-60deg);
-            transform: translate(0px, -100px) rotate(-60deg);
-  }
-}
-
-@keyframes racketa {
-  0% {
-    -webkit-transform: translate(0px, 0px);
-            transform: translate(0px, 0px);
-  }
-  25% {
-    -webkit-transform: translate(50px, -50px) rotate(-30deg);
-            transform: translate(50px, -50px) rotate(-30deg);
-  }
-  50% {
-    -webkit-transform: translate(0px, -100px) rotate(-60deg);
-            transform: translate(0px, -100px) rotate(-60deg);
-  }
-}
-
 body {
   color: #222222;
   font-family: Roboto, "sans-serif";
@@ -399,11 +369,11 @@ a {
 
 .navigation .logo span::before {
   position: absolute;
-  content: "What else?";
-  width: 75px;
+  content: "Innova technology";
+  width: 150px;
   height: 20px;
   font-size: 14px;
-  left: 86px;
+  left: 60px;
   bottom: 0px;
   color: #eb643c;
   font-weight: 400;
@@ -412,7 +382,7 @@ a {
 
 @media (max-width: 1150px) {
   .navigation .logo span::before {
-    left: 80px;
+    left: 40px;
   }
 }
 
@@ -579,8 +549,6 @@ a {
 .previewBOX .preview__ico {
   color: #eb643c;
   font-size: 64px;
-  -webkit-animation: racketa 2s ease-in-out;
-          animation: racketa 2s ease-in-out;
 }
 
 .previewBOX .preview__title1 {
@@ -597,6 +565,7 @@ a {
 .previewBOX .preview__title2 {
   padding-bottom: 20px;
   font-family: Montserrat;
+  text-align: center;
   font-size: 48px;
   font-weight: 700;
   line-height: 28px;
@@ -645,6 +614,13 @@ a {
   }
 }
 
+@media (max-width: 437px) {
+  .previewBOX .preview__btns .more,
+  .previewBOX .preview__btns .connect {
+    width: 100%;
+  }
+}
+
 .previewBOX .preview__btns .connect {
   margin-left: 20px;
   background: #F3F3F3;
@@ -653,16 +629,17 @@ a {
   transition: .25s;
 }
 
+@media (max-width: 437px) {
+  .previewBOX .preview__btns .connect {
+    width: 100%;
+    margin: 10px auto;
+  }
+}
+
 .previewBOX .preview__btns .connect:hover {
   background: #eb643c;
   color: #F3F3F3;
   border: 2px solid #F3F3F3;
-}
-
-@media (max-width: 850px) {
-  .previewBOX .preview__btns .connect {
-    margin: auto;
-  }
 }
 
 .previewBOX .preview__btns .more {
