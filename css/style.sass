@@ -274,12 +274,13 @@ a
   z-index: 1000
   &::before
     content: "seo optimizeD"
+    cursor: pointer
     color: #ddd
     position: absolute
     transform: rotate(90deg)
-    left: -137px
-    bottom: 290px
-    padding: 20px 60px
+    left: -90px
+    bottom: 265px
+    padding: 20px 20px
     width: 200px
     text-align: center
     background: #111
@@ -287,14 +288,21 @@ a
     font-size: 16px
     font-weight: 700
     text-transform: uppercase
+    +bp(800px)
+      left: -108px
+      font-size: 12px
+      padding: 10px 20px
+    +bp(540px)
+      bottom: 390px
   &::after
     content: "Conversion Rate"
+    cursor: pointer
     color: #ddd
     position: absolute
     transform: rotate(90deg)
-    right: -133px
-    bottom: 290px
-    padding: 20px 60px
+    right: -90px
+    bottom: 265px
+    padding: 20px 20px
     width: 200px
     text-align: center
     background: #111
@@ -302,6 +310,12 @@ a
     font-size: 16px
     font-weight: 700
     text-transform: uppercase
+    +bp(800px)
+      right: -103px
+      font-size: 12px
+      padding: 10px 20px
+    +bp(540px)
+      bottom: 390px
 
   .preview
     display: flex
@@ -336,6 +350,8 @@ a
       line-height: 28px
       color: $uxWhite
       letter-spacing: 0.48px
+      +bp(650px)
+        margin: 14px 20px
       span
         color: $glColor
 
@@ -389,7 +405,3 @@ a
       text-align: center
       +bp(1100px)
         width: 80%
-        
-
-
-

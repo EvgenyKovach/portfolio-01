@@ -529,13 +529,14 @@ a {
 
 .previewBOX::before {
   content: "seo optimizeD";
+  cursor: pointer;
   color: #ddd;
   position: absolute;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  left: -137px;
-  bottom: 290px;
-  padding: 20px 60px;
+  left: -90px;
+  bottom: 265px;
+  padding: 20px 20px;
   width: 200px;
   text-align: center;
   background: #111;
@@ -545,15 +546,30 @@ a {
   text-transform: uppercase;
 }
 
+@media (max-width: 800px) {
+  .previewBOX::before {
+    left: -108px;
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .previewBOX::before {
+    bottom: 390px;
+  }
+}
+
 .previewBOX::after {
   content: "Conversion Rate";
+  cursor: pointer;
   color: #ddd;
   position: absolute;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-  right: -133px;
-  bottom: 290px;
-  padding: 20px 60px;
+  right: -90px;
+  bottom: 265px;
+  padding: 20px 20px;
   width: 200px;
   text-align: center;
   background: #111;
@@ -561,6 +577,20 @@ a {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .previewBOX::after {
+    right: -103px;
+    font-size: 12px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .previewBOX::after {
+    bottom: 390px;
+  }
 }
 
 .previewBOX .preview {
@@ -613,6 +643,12 @@ a {
   line-height: 28px;
   color: #F3F3F3;
   letter-spacing: 0.48px;
+}
+
+@media (max-width: 650px) {
+  .previewBOX .preview__title2 {
+    margin: 14px 20px;
+  }
 }
 
 .previewBOX .preview__title2 span {
